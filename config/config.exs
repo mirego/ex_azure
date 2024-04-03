@@ -1,4 +1,4 @@
-use Mix.Config
+import Config
 
 config :ex_azure,
     account:    System.get_env("AZURE_ACCOUNT"),

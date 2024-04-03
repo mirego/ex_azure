@@ -15,15 +15,16 @@ defmodule ExAzure.Mixfile do
   end
 
   def application do
-    [applications: [:erlazure],
-     mod: {ExAzure, []}]
+    [
+      applications: [:erlazure],
+      exra_applications: [:xmerl],
+      mod: {ExAzure, []}
+    ]
   end
 
   defp deps do
     [
-      {:erlazure, github: "gullitmiranda/erlazure", manager: :rebar},
-      {:ex_doc  , "~> 0.11.5", only: [:dev, :test]},
-      {:earmark , "~> 0.2.1" , only: [:dev, :test]},
+      {:erlazure, github: "dkataskin/erlazure"}
     ]
   end
 
